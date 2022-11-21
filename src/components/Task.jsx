@@ -1,10 +1,10 @@
 import { useContext } from "react";
-// import { TaskContext } from "../context/TaskContext";
+import { TaskContext } from "../context/TaskContext"
 
-// const value = useContext(TaskContext);
-// console.log(value)
+export function Task({task}){
 
-export function Task({task , deleteTask}){
+    const {deleteTask} = useContext(TaskContext)
+
     return(
         <>
         <h3>ID: {task.id}</h3>
